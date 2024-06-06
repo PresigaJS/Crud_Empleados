@@ -1,0 +1,43 @@
+<%- include('../partials/header') %>
+<main>
+  <h2>Registrar Nuevo Empleado</h2>
+  <form action="/empleados/add" method="POST" enctype="multipart/form-data" style="max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px;">
+    <div style="margin-bottom: 15px;">
+      <label for="identificacion" style="display: block; margin-bottom: 5px;">Documento:</label>
+      <input type="text" id="identificacion" name="identificacion" required style="width: 100%; padding: 8px; box-sizing: border-box;">
+    </div>
+    
+    <div style="margin-bottom: 15px;">
+      <label for="nombres" style="display: block; margin-bottom: 5px;">Nombres:</label>
+      <input type="text" id="nombres" name="nombres" required style="width: 100%; padding: 8px; box-sizing: border-box;">
+    </div>
+    
+    <div style="margin-bottom: 15px;">
+      <label for="apellidos" style="display: block; margin-bottom: 5px;">Apellidos:</label>
+      <input type="text" id="apellidos" name="apellidos" required style="width: 100%; padding: 8px; box-sizing: border-box;">
+    </div>
+    
+    <div style="margin-bottom: 15px;">
+      <label for="correo" style="display: block; margin-bottom: 5px;">Correo:</label>
+      <input type="email" id="correo" name="correo" required style="width: 100%; padding: 8px; box-sizing: border-box;">
+    </div>
+    
+    <div style="margin-bottom: 15px;">
+      <label for="direccion" style="display: block; margin-bottom: 5px;">Dirección:</label>
+      <input type="text" id="direccion" name="direccion" required style="width: 100%; padding: 8px; box-sizing: border-box;">
+    </div>
+    
+    <div style="margin-bottom: 15px;">
+      <label for="telefono" style="display: block; margin-bottom: 5px;">Celular:</label>
+      <input type="text" id="telefono" name="telefono" required style="width: 100%; padding: 8px; box-sizing: border-box;">
+    </div>
+    
+    <div style="margin-bottom: 15px;">
+      <label for="fotografia" style="display: block; margin-bottom: 5px;">Imagen:</label>
+      <input type="file" id="fotografia" name="fotografia" required style="width: 100%; padding: 8px; box-sizing: border-box;">
+    </div>
+    
+    <button type="submit" style="display: block; width: 100%; padding: 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">Guardar</button>
+  </form>
+</main>
+<%- include('../partials/footer') %>

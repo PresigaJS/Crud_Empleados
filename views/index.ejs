@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            text-align: center;
+        }
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            background-color: #4CAF50;
+            padding: 8px 16px;
+            border-radius: 5px;
+        }
+        nav ul li a:hover {
+            background-color: #45a049;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            
+            <li><a href="/empleados">Empleados</a></li>
+            <li><a href="/">Inicio</a></li>
+            <li><a href="/nomina">Nomina</a></li>
+        </ul>
+    </nav>
+</body>
+</html>

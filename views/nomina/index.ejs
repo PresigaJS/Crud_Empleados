@@ -1,0 +1,47 @@
+<%- include('../partials/header') %>
+<main>
+  <h2>Lista de Nóminas</h2>
+  <a href="/nomina/add" class="actions" style="display: inline-block; margin-bottom: 20px; padding: 10px 20px; background-color: #4CAF50; color: white; text-decoration: none; border-radius: 5px;">Agregar Nómina</a>
+  <table style="width: 100%; border-collapse: collapse;">
+    <thead style="background-color: #f2f2f2;">
+      <tr>
+        <th style="padding: 10px; border: 1px solid #ddd;">ID</th>
+        <th style="padding: 10px; border: 1px solid #ddd;">Fecha</th>
+        <th style="padding: 10px; border: 1px solid #ddd;">Empleado</th>
+        <th style="padding: 10px; border: 1px solid #ddd;">Salario Base</th>
+        <th style="padding: 10px; border: 1px solid #ddd;">Deducción Salud</th>
+        <th style="padding: 10px; border: 1px solid #ddd;">Deducción Pensión</th>
+        <th style="padding: 10px; border: 1px solid #ddd;">Comisiones</th>
+        <th style="padding: 10px; border: 1px solid #ddd;">Salario Neto</th>
+        <th style="padding: 10px; border: 1px solid #ddd;">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% nominas.forEach(nomina => { %>
+      <tr style="text-align: center;">
+        <td style="padding: 10px; border: 1px solid #ddd;"><%= nomina.id_nomina %></td>
+        <td style="padding: 10px; border: 1px solid #ddd;"><%= nomina.fecha_nomina %></td>
+        <td style="padding: 10px; border: 1px solid #ddd;"><%= nomina.nombres %> <%= nomina.apellidos %></td>
+        <td style="padding: 10px; border: 1px solid #ddd;"><%= nomina.salario_base %></td>
+        <td style="padding: 10px; border: 1px solid #ddd;"><%= nomina.deduccion_salud %></td>
+        <td style="padding: 10px; border: 1px solid #ddd;"><%= nomina.deduccion_pension %></td>
+        <td style="padding: 10px; border: 1px solid #ddd;"><%= nomina.comisiones %></td>
+        <td style="padding: 10px; border: 1px solid #ddd;"><%= nomina.salario_neto %></td>
+        <td style="padding: 10px; border: 1px solid #ddd;">
+          <a href="/nomina/edit/<%= nomina.id_nomina %>" class="actions" style="margin-right: 10px; text-decoration: none; color: #4CAF50;">Editar</a>
+          <a href="/nomina/delete/<%= nomina.id_nomina %>" class="actions" style="text-decoration: none; color: #f44336;">Eliminar</a>
+        </td>
+      </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</main>
+<%- include('../partials/footer') %>
+
+<nav style="text-align: center; margin-top: 20px;">
+  <ul style="list-style-type: none; padding: 0; margin: 0;">
+      <li style="display: inline-block;"><a href="/empleados" style="color: white; text-decoration: none; font-size: 1.2em; transition: background-color 0.3s ease, color 0.3s ease; background-color: #4CAF50; padding: 8px 16px; border-radius: 5px;">Empleados</a></li>
+      <li style="display: inline-block;"><a href="/" style="color: white; text-decoration: none; font-size: 1.2em; transition: background-color 0.3s ease, color 0.3s ease; background-color: #4CAF50; padding: 8px 16px; border-radius: 5px;">Inicio</a></li>
+      <li style="display: inline-block;"><a href="/nomina" style="color: white; text-decoration: none; font-size: 1.2em; transition: background-color 0.3s ease, color 0.3s ease; background-color: #4CAF50; padding: 8px 16px; border-radius: 5px;">Nómina</a></li>
+  </ul>
+</nav>

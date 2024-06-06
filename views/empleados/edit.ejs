@@ -1,0 +1,44 @@
+<%- include('../partials/header') %>
+<main>
+  <h2>Editar Empleado</h2>
+  <form action="/empleados/edit/<%= empleado.id_empleado %>" method="POST" enctype="multipart/form-data" style="max-width: 600px; margin: auto; padding: 20px; border: 1px solid #ccc; border-radius: 10px;">
+    <div style="margin-bottom: 15px;">
+      <label for="identificacion" style="display: block; margin-bottom: 5px;">Identificación:</label>
+      <input type="text" id="identificacion" name="identificacion" value="<%= empleado.identificacion %>" required style="width: 100%; padding: 8px; box-sizing: border-box;">
+    </div>
+    
+    <div style="margin-bottom: 15px;">
+      <label for="nombres" style="display: block; margin-bottom: 5px;">Nombres:</label>
+      <input type="text" id="nombres" name="nombres" value="<%= empleado.nombres %>" required style="width: 100%; padding: 8px; box-sizing: border-box;">
+    </div>
+    
+    <div style="margin-bottom: 15px;">
+      <label for="apellidos" style="display: block; margin-bottom: 5px;">Apellidos:</label>
+      <input type="text" id="apellidos" name="apellidos" value="<%= empleado.apellidos %>" required style="width: 100%; padding: 8px; box-sizing: border-box;">
+    </div>
+    
+    <div style="margin-bottom: 15px;">
+      <label for="correo" style="display: block; margin-bottom: 5px;">Correo:</label>
+      <input type="email" id="correo" name="correo" value="<%= empleado.correo %>" required style="width: 100%; padding: 8px; box-sizing: border-box;">
+    </div>
+    
+    <div style="margin-bottom: 15px;">
+      <label for="direccion" style="display: block; margin-bottom: 5px;">Dirección:</label>
+      <input type="text" id="direccion" name="direccion" value="<%= empleado.direccion %>" required style="width: 100%; padding: 8px; box-sizing: border-box;">
+    </div>
+    
+    <div style="margin-bottom: 15px;">
+      <label for="telefono" style="display: block; margin-bottom: 5px;">Teléfono:</label>
+      <input type="text" id="telefono" name="telefono" value="<%= empleado.telefono %>" required style="width: 100%; padding: 8px; box-sizing: border-box;">
+    </div>
+    
+    <div style="margin-bottom: 15px;">
+      <label for="fotografia" style="display: block; margin-bottom: 5px;">Fotografía:</label>
+      <input type="file" id="fotografia" name="fotografia" style="width: 100%; padding: 8px; box-sizing: border-box;">
+      <input type="hidden" name="fotografia_anterior" value="<%= empleado.fotografia %>">
+    </div>
+    
+    <button type="submit" style="display: block; width: 100%; padding: 10px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">Guardar Cambios</button>
+  </form>
+</main>
+<%- include('../partials/footer') %>
